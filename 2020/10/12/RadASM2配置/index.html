@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>RadASM2配置 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="RadASM 是一款针对汇编语言的 IDE。"><meta property="og:type" content="blog"><meta property="og:title" content="RadASM2配置"><meta property="og:url" content="http://example.com/2020/10/12/RadASM2%E9%85%8D%E7%BD%AE/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="RadASM 是一款针对汇编语言的 IDE。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:published_time" content="2020-10-12T14:40:56.000Z"><meta property="article:modified_time" content="2020-10-12T14:58:34.404Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="汇编"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2020/10/12/RadASM2%E9%85%8D%E7%BD%AE/"},"headline":"Hexo","image":["http://example.com/img/og_image.png"],"datePublished":"2020-10-12T14:40:56.000Z","dateModified":"2020-10-12T14:58:34.404Z","author":{"@type":"Person","name":"John Doe"},"description":"RadASM 是一款针对汇编语言的 IDE。"}</script><link rel="canonical" href="http://example.com/2020/10/12/RadASM2%E9%85%8D%E7%BD%AE/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/carbon.png" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-10-12T14:40:56.000Z" title="2020-10-12T14:40:56.000Z">2020-10-12</time>发表</span><span class="level-item"><time dateTime="2020-10-12T14:58:34.404Z" title="2020-10-12T14:58:34.404Z">2020-10-12</time>更新</span><span class="level-item">3 分钟读完 (大约424个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">RadASM2配置</h1><div class="content"><p>RadASM 是一款针对汇编语言的 IDE。</p>
+<a id="more"></a>
+
+<h1 id="初级配置"><a href="#初级配置" class="headerlink" title="初级配置"></a>初级配置</h1><ul>
+<li><p>Github地址：<a target="_blank" rel="noopener" href="https://github.com/mrfearless/RadASM2/releases/tag/Latest"> </a><a target="_blank" rel="noopener" href="https://github.com/mrfearless/RadASM2/releases/tag/Latest">https://github.com/mrfearless/RadASM2/releases/tag/Latest</a></p>
+</li>
+<li><p>下载、安装、打开</p>
+</li>
+<li><p>选项 – 设置路径 – App($A) 改成自己的 masm32 路径</p>
+</li>
+<li><p>支持 Irvine32 库：在代码中添加</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">includelib YourIrvinePath\Kernel32.lib</span><br><span class="line">includelib YourIrvinePath\User32.lib</span><br><span class="line">includelib YourIrvinePath\Irvine32.lib</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>自定义配色：选项 - 颜色及关键字（自带的配色亮瞎眼）</p>
+<ul>
+<li>打开安装目录中的 RadASM.ini，找到 [Color] 代码段</li>
+<li>亮色，添加：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;index&#125;&#125;&#x3D;&#123;&#123;name&#125;&#125;,16777215,0,8388608,16777215,15777984,12644544,12632304,16441763,8421504,8388608,14286847,0,14286847,0,14286847,0,8421440,16711680,37781504,4227072,9508725,16809984,25165824,33521664,33489024,29393024,25198592,21004543,16777471,33488896,33133133,33183327,25165888,16711680,25166079,16809984,11942572,25165824,13717099,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,16777215,0,0,0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>暗色，添加：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;index&#125;&#125;&#x3D;&#123;&#123;name&#125;&#125;,3549952,9868419,10592659,4339207,6316128,12644544,4605510,8533715,1461195,8388608,3549952,9868419,3549952,9868419,3549952,9868419,3549952,9868419,8421376,33609727,10592659,1461195,2631935,12874092,39301,16744448,8533715,12874092,11184640,1461195,8533715,25310931,12874092,282233638,16711680,16711680,13798182,1461195,13798182,3549952,3549952,3549952,3549952,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583,2039583</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义字体：选项 - 字体选项 - 代码编辑 - Consolas</p>
+</li>
+</ul>
+<h1 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h1><ul>
+<li><p>文件 – 新建工程</p>
+</li>
+<li><p>编译器 – masm</p>
+</li>
+<li><p>工程类型 – Console App</p>
+</li>
+<li><p>工程名称 (<code>hello</code>) 、工程文件夹</p>
+</li>
+<li><p>下一步 - …… - 完成，在 hello.asm 中编写汇编代码</p>
+</li>
+</ul>
+<p>左下角按钮可以显示行号。</p>
+<h1 id="调试代码"><a href="#调试代码" class="headerlink" title="调试代码"></a>调试代码</h1><p>运行代码：工具栏中提供按钮，进行编译 – 构建 – 运行。快捷键：<code>Ctrl + F5</code>。</p>
+<h2 id="使用自带调试工具"><a href="#使用自带调试工具" class="headerlink" title="使用自带调试工具"></a>使用自带调试工具</h2><ul>
+<li>编译并构建，在视图 – Debug Window打开调试窗口。</li>
+<li>设置行断点（<code>Ctrl + T</code>）。</li>
+<li>构建 – Debug – Run（<code>Shift + F7</code>）<ul>
+<li>Step into: <code>F7</code></li>
+<li>Step over: <code>Ctrl + F7</code></li>
+<li>Break: <code>Ctrl + Alt + F7</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="OllyDbg"><a href="#OllyDbg" class="headerlink" title="OllyDbg"></a>OllyDbg</h2><p>需要以管理员身份打开 RadASM，以免调用 OllyDbg 时弹出警告。</p>
+<p>OllyDbg 官网：<a target="_blank" rel="noopener" href="http://www.ollydbg.de/">http://www.ollydbg.de/</a></p>
+<p>在 RadASM 中配置：选项 – 设置路径 – Debug($E) 改为自己的 OllyDbg 路径。</p>
+<p>开始调试：<code>Ctrl + D</code></p>
+<p>更加强大的功能：</p>
+<ul>
+<li>寄存器修改、数值搜索</li>
+<li>插件扩展</li>
+<li>寻常断点、API断点、内存断点、硬件断点</li>
+</ul>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/images/wechat.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/09/20/Collections%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"><span class="level-item">Collections源码解析</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="valine-thread"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script>new Valine({
+            el: '#valine-thread' ,
+            appId: "gBb5sgRimbbsAXr7xrnRobfP-gzGzoHsz",
+            appKey: "XrcjrvKU6JNxEvXYEcri34Wm",
+            
+            avatar: "mm",
+            
+            meta: ["nick","mail","link"],
+            pageSize: 10,
+            lang: "zh-CN",
+            
+            highlight: true,
+            
+            
+            
+            
+            
+            requiredFields: [],
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/images/avatar.jpg" alt="蓝冰"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">蓝冰</p><p class="is-size-6 is-block">学生</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/blueice-thu" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">十月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/09/"><span class="level-start"><span class="level-item">九月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="tag">机器学习</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B1%87%E7%BC%96/"><span class="tag">汇编</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">1</span></a></div></div></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#初级配置"><span class="level-left"><span class="level-item">初级配置</span></span></a></li><li><a class="level is-mobile" href="#编写代码"><span class="level-left"><span class="level-item">编写代码</span></span></a></li><li><a class="level is-mobile" href="#调试代码"><span class="level-left"><span class="level-item">调试代码</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#使用自带调试工具"><span class="level-left"><span class="level-item">使用自带调试工具</span></span></a></li><li><a class="level is-mobile" href="#OllyDbg"><span class="level-left"><span class="level-item">OllyDbg</span></span></a></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-10-12T14:40:56.000Z">2020-10-12</time></p><p class="title"><a href="/2020/10/12/RadASM2%E9%85%8D%E7%BD%AE/">RadASM2配置</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-20T06:22:01.000Z">2020-09-20</time></p><p class="title"><a href="/2020/09/20/Collections%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">Collections源码解析</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-01-31T04:34:46.000Z">2020-01-31</time></p><p class="title"><a href="/2020/01/31/TensorFlow%E5%9F%BA%E7%A1%80/">TensorFlow基础</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-12-26T06:26:35.000Z">2019-12-26</time></p><p class="title"><a href="/2019/12/26/%E8%AE%A1%E7%AE%97%E6%97%A5%E6%9C%9F%E9%97%B4%E9%9A%94/">计算时间间隔</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/carbon.png" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2020 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
